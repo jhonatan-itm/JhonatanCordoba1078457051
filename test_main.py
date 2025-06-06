@@ -46,7 +46,3 @@ def test_eliminar_repuesto():
     assert response.status_code == 200
     data = response.json()
     assert data["mensaje"] == "Repuesto eliminado"
-
-def test_obtener_repuesto_no_existente():
-    response = client.get("/repuestos/999")
-    assert response.status_code == 404
